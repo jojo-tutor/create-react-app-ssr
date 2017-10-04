@@ -2,16 +2,7 @@
 
 **:warning: This is outdated, please refer to the official and new [react-router docs](https://reacttraining.com/react-router/)**
 
-See : https://medium.com/@patriciolpezjuri/using-create-react-app-with-react-router-express-js-8fa658bf892d
-
 ## Development
-
-Clone this repository:
-
-```sh
-git clone https://github.com/mrpatiwi/routed-react.git
-cd routed-react
-```
 
 Install dependencies:
 
@@ -29,16 +20,16 @@ npm start
 
 Be sure to install Docker and start a Docker-machine if necessary.
 
-Let's create an image named `routed-react`:
+Let's create an image named `create-react-app-with-express-server`:
 
 ```sh
-docker build -t routed-react .
+docker build -t create-react-app-with-express-server .
 ```
 
-Finally, start a container named `routed-react-instance` at port `80`.
+Finally, start a container named `create-react-app-with-express-server-instance` at port `80`.
 
 ```sh
-docker run -p 80:9000 --name routed-react-instance routed-react
+docker run -p 80:9000 --name create-react-app-with-express-server-instance create-react-app-with-express-server
 ```
 
 ## Testing

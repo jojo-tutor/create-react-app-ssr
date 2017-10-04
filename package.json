@@ -1,6 +1,8 @@
 {
-  "name": "routed-react",
+  "name": "CRA with Express Server Boilerplate",
   "version": "0.0.1",
+  "description": "CRA with Express Server Boilerplate",
+  "author": "Jojo E. Tutor",
   "private": true,
   "devDependencies": {
     "chai": "^3.5.0",
