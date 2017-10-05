@@ -11,12 +11,12 @@ class App extends PureComponent {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div>
         <div className="App-header">
           <h2>Welcome to React</h2>
-          <Button flat primary swapTheming onClick={()=>{this.props.router.push('/about')}}>Users Page</Button>
+          <Button flat onClick={()=>{this.props.history.push('/users')}}>Users</Button>
+          <Button flat onClick={()=>{this.props.history.push('/about')}}>About</Button>
         </div>
       </div>
     );
