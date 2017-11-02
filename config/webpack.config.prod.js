@@ -68,6 +68,11 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style', 'css?-autoprefixer!postcss')
       },
       {
+        test: /\.scss$/,
+        include: [paths.appSrc, paths.appNodeModules],
+        loaders: ['style', 'css', 'sass']
+      },
+      {
         test: /\.json$/,
         include: [paths.appSrc, paths.appNodeModules],
         loader: 'json'

@@ -1,11 +1,18 @@
-// index.js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { browserHistory } from 'react-router'
+import { BrowserRouter as Router } from 'react-router-dom'
+import App from './containers/App'
+import './styles/index.css'
 
-import Routes from './routes'
+import WebFontLoader from 'webfontloader'
+
+WebFontLoader.load({
+  google: {
+    families: ['Roboto:300,400,500,700', 'Material Icons'],
+  },
+})
 
 ReactDOM.render(
-  <Routes history={browserHistory} />,
+  <Router><App /></Router>,
   document.getElementById('root')
 )
