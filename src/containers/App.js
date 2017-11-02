@@ -18,7 +18,7 @@ const navItems = [{
   to: '/page-1',
   icon: 'bookmark',
 }, {
-  label: 'Page 2',
+  label: 'Users',
   to: '/page-2',
   icon: 'donut_large',
 }, {
@@ -35,9 +35,11 @@ class App extends Component {
           <NavigationDrawer
             drawerTitle='CRA'
             toolbarTitle='Welcome to react-md'
+            tabletDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
+            desktopDrawerType={NavigationDrawer.DrawerTypes.CLIPPED}
             navItems={navItems.map(props => <NavLink {...props} key={props.to} />)}
           >
-            <Switch key={location.key}>
+            <Switch>
               <Route exact path='/' location={location} component={Home} />
               <Route path='/page-1' location={location} component={Page1} />
               <Route path='/page-2' location={location} component={Page2} />
