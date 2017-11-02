@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from 'react'
 
 class About extends PureComponent {
   constructor(props) {
@@ -14,8 +14,8 @@ class About extends PureComponent {
           About
         </h1>
       </div>
-    );
+    )
   }
 }
 
-export default About;
+export default About

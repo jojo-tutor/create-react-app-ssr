@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Slider from 'react-md/lib/Sliders';
+import React, { Component } from 'react'
+import Slider from 'react-md/lib/Sliders'
 
 export default class Page3 extends Component {
   render() {
@@ -10,6 +10,6 @@ export default class Page3 extends Component {
         </h2>
         <Slider id="page-3-slider" className="md-cell md-cell--12" />
       </div>
-    );
+    )
   }
 }

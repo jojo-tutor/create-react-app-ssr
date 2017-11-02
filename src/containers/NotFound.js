@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from 'react'
 
 export default class NotFound extends PureComponent {
   constructor(props) {
@@ -14,6 +14,6 @@ export default class NotFound extends PureComponent {
           404 <small>Not Found :(</small>
         </h1>
       </div>
-    );
+    )
   }
 }

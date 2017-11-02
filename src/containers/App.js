@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import NavigationDrawer from 'react-md/lib/NavigationDrawers';
-import NavLink from './NavLink';
+import React, { Component } from 'react'
+import { Route, Switch } from 'react-router-dom'
+import NavigationDrawer from 'react-md/lib/NavigationDrawers'
+import NavLink from './NavLink'
 
-import Home from './Home';
-import Page1 from './Page1';
-import Page2 from './Page2';
-import Page3 from './Page3';
+import Home from './Home'
+import Page1 from './Page1'
+import Page2 from './Page2'
+import Page3 from './Page3'
 
 const navItems = [{
   exact: true,
@@ -25,7 +25,7 @@ const navItems = [{
   label: 'Page 3',
   to: '/page-3',
   icon: 'flight_land',
-}];
+}]
 
 class App extends Component {
   render() {
@@ -46,8 +46,8 @@ class App extends Component {
           </NavigationDrawer>
         )}
       />
-    );
+    )
   }
 }
 
-export default App;
+export default App

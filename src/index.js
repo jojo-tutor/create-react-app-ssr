@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
+import WebFontLoader from 'webfontloader'
+
 import App from './containers/App'
 import './styles/index.css'
 
-import WebFontLoader from 'webfontloader'
 
 WebFontLoader.load({
   google: {

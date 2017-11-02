@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from 'react'
 
 class Users extends PureComponent {
   constructor(props) {
@@ -14,7 +14,7 @@ class Users extends PureComponent {
           Users
         </h1>
       </div>
-    );
+    )
   }
 }
 

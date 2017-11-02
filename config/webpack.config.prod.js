@@ -60,6 +60,15 @@ module.exports = {
         query: require('./babel.prod')
       },
       {
+        test: /\.jsx?$/,
+        loader: 'babel',
+        exclude: /node_modules/,
+        query: {
+          cacheDirectory: true,
+          presets: ['react', 'es2015']
+        }
+      },
+      {
         test: /\.css$/,
         include: [paths.appSrc, paths.appNodeModules],
         // Disable autoprefixer in css-loader itself:
