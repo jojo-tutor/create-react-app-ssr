@@ -1,6 +1,14 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
+import { connect } from 'react-redux'
+import actions from '../redux/actions'
 
-export default class Home extends Component {
+class Home extends PureComponent {
+  constructor(props) {
+    super(props)
+
+    // this.props.dispatch(actions.fetchUserList())
+  }
+
   render() {
     return (
       <div className="home">
@@ -11,3 +19,9 @@ export default class Home extends Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+  return { user: state.user }
+}
+
+export default connect(mapStateToProps)(Home)

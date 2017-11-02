@@ -33,15 +33,15 @@ class App extends Component {
       <Route
         render={({ location }) => (
           <NavigationDrawer
-            drawerTitle="react-md with CRA"
-            toolbarTitle="Welcome to react-md"
+            drawerTitle='CRA'
+            toolbarTitle='Welcome to react-md'
             navItems={navItems.map(props => <NavLink {...props} key={props.to} />)}
           >
             <Switch key={location.key}>
-              <Route exact path="/" location={location} component={Home} />
-              <Route path="/page-1" location={location} component={Page1} />
-              <Route path="/page-2" location={location} component={Page2} />
-              <Route path="/page-3" location={location} component={Page3} />
+              <Route exact path='/' location={location} component={Home} />
+              <Route path='/page-1' location={location} component={Page1} />
+              <Route path='/page-2' location={location} component={Page2} />
+              <Route path='/page-3' location={location} component={Page3} />
             </Switch>
           </NavigationDrawer>
         )}

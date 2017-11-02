@@ -1,10 +1,16 @@
-import { applyMiddleware, createStore } from 'redux'
-import logger from 'redux-logger'
-import thunk from 'redux-thunk'
-import promise from 'redux-promise-middleware'
+import { applyMiddleware, createStore, compose } from 'redux'
+import createSagaMiddleware from 'redux-saga'
 
-import reducer from './reducers'
+import sagas from './redux/sagas'
+import reducer from './redux/reducers'
 
-const middleware = applyMiddleware(promise(), thunk, logger)
+const sagaMiddleware = createSagaMiddleware()
+const middleware = applyMiddleware(sagaMiddleware)
+const store = createStore(
+  reducer,
+  compose(middleware, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+)
 
-export default createStore(reducer, middleware)
+sagaMiddleware.run(sagas)
+
+export default store

@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import Card from 'react-md/lib/Cards/Card'
 import CardTitle from 'react-md/lib/Cards/CardTitle'
 import CardText from 'react-md/lib/Cards/CardText'
 
-export default class Page1 extends Component {
+import actions from '../redux/actions'
+
+class Page1 extends Component {
+  constructor(props) {
+    super(props)
+
+    this.props.dispatch(actions.fetchUserList())
+  }
+
   render() {
     return (
       <div className="md-grid">
@@ -32,3 +41,9 @@ export default class Page1 extends Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+  return { user: state.user }
+}
+
+export default connect(mapStateToProps)(Page1)
