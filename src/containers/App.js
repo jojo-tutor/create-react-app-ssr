@@ -7,6 +7,7 @@ import Home from './Home'
 import Page1 from './Page1'
 import Page2 from './Page2'
 import Page3 from './Page3'
+import NotFound from './NotFound'
 
 const navItems = [{
   exact: true,
@@ -44,6 +45,7 @@ class App extends Component {
               <Route path='/page-1' location={location} component={Page1} />
               <Route path='/page-2' location={location} component={Page2} />
               <Route path='/page-3' location={location} component={Page3} />
+              <Route path='*' component={NotFound} />
             </Switch>
           </NavigationDrawer>
         )}
