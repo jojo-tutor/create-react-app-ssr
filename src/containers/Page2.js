@@ -3,9 +3,7 @@ import { connect } from 'react-redux'
 import actions from '../redux/actions'
 
 class Page2 extends Component {
-  constructor(props) {
-    super(props)
-
+  componentDidMount() {
     this.props.dispatch(actions.fetchUserList())
   }
 

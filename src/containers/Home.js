@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-
+import SimplePagination from './SimplePagination'
 
 class Home extends PureComponent {
   render() {
@@ -8,6 +8,7 @@ class Home extends PureComponent {
         <h2 className='md-cell md-cell--12 md-text-container'>
           Home
         </h2>
+        <SimplePagination/>
       </div>
     )
   }
