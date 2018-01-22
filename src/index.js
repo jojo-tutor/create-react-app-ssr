@@ -6,7 +6,6 @@ import {Provider} from 'react-redux'
 
 import App from './containers/App'
 import store from './store'
-// import './styles/index.css'
 
 WebFontLoader.load({
   google: {

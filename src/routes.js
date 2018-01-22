@@ -5,7 +5,6 @@ import {Provider} from 'react-redux'
 import store from './store'
 
 import Navigation from './containers/Navigation'
-// import App from './containers/App'
 import Users from './containers/Users'
 import About from './containers/About'
 import NotFound from './containers/NotFound'
