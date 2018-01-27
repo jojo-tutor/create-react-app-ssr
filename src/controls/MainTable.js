@@ -51,13 +51,19 @@ class MainTable extends PureComponent {
           <TableBody>
             {
               data.map(eachData => {
-                return (<TableRow key={eachData.id}>
-                  {
-                    header.map(({ key }, count) => {
-                      return (<TableColumn key={`${{ key }}${count}`}>{eachData[key]}</TableColumn>)
-                    })
-                  }
-                </TableRow>)
+                return (
+                  <TableRow key={eachData.id}>
+                    {
+                      header.map(({ key }, count) => {
+                        return (
+                          <TableColumn key={`${{ key }}${count}`}>
+                            {eachData[key]}
+                          </TableColumn>
+                        )
+                      })
+                    }
+                  </TableRow>
+                )
               }
               )
             }

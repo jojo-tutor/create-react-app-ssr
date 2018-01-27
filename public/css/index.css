@@ -3624,5 +3624,5 @@ svg.md-icon {
   .md-background--secondary-hover:hover {
     background: rgba(255, 110, 64, 0.9); } }
 
-h2 {
-  font-size: 40px; }
+.card_form-details {
+  margin: 90px 25px; }

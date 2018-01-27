@@ -4,7 +4,7 @@ import { Button, DialogContainer, Toolbar, TextField } from 'react-md';
 
 class FullDialog extends PureComponent {
   render() {
-    const { title, visible, children, onHide } = this.props;
+    const { title, visible, children, onAdd, onHide } = this.props;
     return (
       <DialogContainer
         id="add-desserts-dialog"
@@ -19,10 +19,18 @@ class FullDialog extends PureComponent {
           titleId="add-desserts-dialog-title"
           fixed
           colored
-          actions={<Button type="submit" flat>Submit</Button>}
+          actions={
+            <Button
+              raised
+              secondary
+              type="submit"
+              iconChildren='save'>
+              Save
+            </Button>
+          }
         />
         { children }
-        <Button floating fixed onClick={() => {}} primary>add</Button>
+        <Button floating fixed onClick={onAdd} primary>add</Button>
       </DialogContainer>
     );
   }
@@ -32,6 +40,7 @@ FullDialog.propTypes = {
   title: PropTypes.string.isRequired,
   visible: PropTypes.bool.isRequired,
   onHide: PropTypes.func.isRequired,
+  onAdd: PropTypes.func.isRequired,
 }
 
 export default FullDialog

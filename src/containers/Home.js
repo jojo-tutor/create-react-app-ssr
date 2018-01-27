@@ -10,7 +10,8 @@ class Home extends PureComponent {
 
     this.state = {
       counter: 0,
-      dialogVisible: false
+      dialogVisible: false,
+      formData: [0]
     }
 
     this.TableProperties = {
@@ -49,8 +50,12 @@ class Home extends PureComponent {
   handleAdd = () => {
     this.setState({ dialogVisible: true })
   }
+  handleAddItem = () => {
+    const formData = [...this.state.formData, this.state.formData.length]
+    this.setState({ formData })
+  }
   render() {
-    const { dialogVisible } = this.state
+    const { dialogVisible, formData } = this.state
     const { start, rows } = this.TableProperties
     const data = this.TableData.slice(start, start + rows)
     return (
@@ -70,9 +75,14 @@ class Home extends PureComponent {
         <FullDialog
           title='Create New Nutrition'
           visible={dialogVisible}
+          onAdd={this.handleAddItem}
           onHide={this.handleHideDialog}
         >
-          <HomeForm/>
+          {
+            formData.map(m => (
+              <HomeForm key={m} />
+            ))
+          }
         </FullDialog>
       </div>
     )
