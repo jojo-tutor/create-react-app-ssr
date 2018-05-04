@@ -1,17 +1,25 @@
 import axios from 'axios'
 import { call, put, takeLatest } from 'redux-saga/effects'
 
-const url = 'https://jsonplaceholder.typicode.com'
+const url = 'http://localhost:4000'
 
-function *FetchUserList() {
+function *FetchUserList({ payload }) {
+  const { page, limit } = payload
   let config = {
     method: 'GET',
-    url: `${url}/users`
+    url: `${url}/customers?_page=${page}&_limit=${limit}`
   }
 
   try {
     const result = yield call(axios, config)
-    yield put({ type: 'FETCH_USER_LIST', payload: result.data })
+    const count = result.headers['x-total-count']
+    yield put({
+      type: 'FETCH_USER_LIST',
+      payload: {
+        data: result.data,
+        total: parseInt(count, 10)
+      }
+    })
   } catch (error) {
     yield put({ type: 'ERROR', payload: error })
   }

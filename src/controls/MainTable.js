@@ -19,7 +19,7 @@ class MainTable extends PureComponent {
     this.setState({ selectedCount })
   }
   render() {
-    const { header, total_count, data, properties, onSort, onPagination, onAddClick } = this.props
+    const { header, totalCount, data, properties, onSort, onPagination, onAddClick } = this.props
     const { selectedCount } = this.state
     const { sort_by, is_ascending, page } = properties
     return (
@@ -70,7 +70,7 @@ class MainTable extends PureComponent {
           </TableBody>
           <TablePagination
             page={page}
-            rows={total_count}
+            rows={totalCount}
             rowsPerPageLabel='Rows'
             onPagination={onPagination}
           />

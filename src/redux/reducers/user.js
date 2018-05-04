@@ -1,5 +1,5 @@
 export default function reducer(state={
-    list: [],
+    list: { data: [], total: 0 },
     data: null,
     fetching: false,
     fetched: false,

@@ -3,32 +3,32 @@ import { Route, Switch } from 'react-router-dom'
 import NavigationDrawer from 'react-md/lib/NavigationDrawers'
 import NavLink from './NavLink'
 
-import Home from './Home'
-import Page1 from './Page1'
-import Page2 from './Page2'
+import Customer from './Customer'
+import Product from './Product'
+import Invoice from './Invoice'
 import Page3 from './Page3'
 import NotFound from './NotFound'
 
 const navItems = [{
   exact: true,
-  label: 'Home',
+  label: 'Customers',
   to: '/',
-  icon: 'home',
+  icon: 'group',
 }, {
-  label: 'Page 1',
-  to: '/page-1',
-  icon: 'bookmark',
+  label: 'Products',
+  to: '/product',
+  icon: 'local_grocery_store',
 }, {
-  label: 'Users',
-  to: '/page-2',
-  icon: 'donut_large',
+  label: 'Invoices',
+  to: '/invoice',
+  icon: 'local_mall',
 }, {
   label: 'Page 3',
   to: '/page-3',
   icon: 'flight_land',
 }]
 
-class App extends Component {
+class Index extends Component {
   render() {
     return (
       <Route
@@ -41,9 +41,9 @@ class App extends Component {
             navItems={navItems.map(props => <NavLink {...props} key={props.to} />)}
           >
             <Switch>
-              <Route exact path='/' location={location} component={Home} />
-              <Route path='/page-1' location={location} component={Page1} />
-              <Route path='/page-2' location={location} component={Page2} />
+              <Route exact path='/' location={location} component={Customer} />
+              <Route path='/product' location={location} component={Product} />
+              <Route path='/invoice' location={location} component={Invoice} />
               <Route path='/page-3' location={location} component={Page3} />
               <Route path='*' component={NotFound} />
             </Switch>
@@ -54,4 +54,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default Index

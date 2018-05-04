@@ -4,7 +4,7 @@ import MainTable from '../controls/MainTable'
 import FullDialog from '../controls/FullDialog'
 import HomeForm from '../components/forms/HomeForm'
 
-class Home extends PureComponent {
+class Product extends PureComponent {
   constructor(props) {
     super(props)
 
@@ -61,7 +61,7 @@ class Home extends PureComponent {
     return (
       <div className='md-grid'>
         <h2 className='md-cell md-cell--12 md-text-container'>
-          Home
+          Products
         </h2>
         <MainTable
           total_count={350}
@@ -89,4 +89,4 @@ class Home extends PureComponent {
   }
 }
 
-export default Home
+export default Product

@@ -1,7 +1,7 @@
 {
-  "name": "create-react-app-with-express-server",
+  "name": "create-react-app-ssr",
   "version": "0.0.1",
-  "description": "CRA with Express Server Boilerplate",
+  "description": "CRA with Server-Side Rendering Boilerplate",
   "author": "Jojo E. Tutor",
   "private": true,
   "devDependencies": {
@@ -58,6 +58,8 @@
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "classnames": "^2.2.5",
     "express": "^4.14.0",
+    "faker": "^4.1.0",
+    "json-server": "^0.12.1",
     "morgan": "^1.7.0",
     "react": "^15.2.1",
     "react-addons-css-transition-group": "^15.5.2",
@@ -72,12 +74,13 @@
     "redux-promise-middleware": "^4.4.1",
     "redux-saga": "^0.16.0",
     "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
     "webfontloader": "^1.6.27"
   },
   "scripts": {
     "build-css": "node-sass scss/ -o public/css/",
     "watch-css": "npm run build-css && node-sass scss/ -o public/css/ --watch --recursive",
-    "start": "concurrently \"node ./scripts/start.js \" \"npm run watch-css\"",
+    "start": "concurrently \"node ./scripts/start.js \" \"npm run watch-css\" \"node ./server\"",
     "start:server": "node ./scripts/start:server.js",
     "build": "node ./scripts/build.js",
     "test": "node ./scripts/test.js"
