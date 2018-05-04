@@ -1,6 +1,4 @@
-# Using `create-react-app` with React Router + Express.js
-
-**:warning: This is outdated, please refer to the official and new [react-router docs](https://reacttraining.com/react-router/)**
+# Using `create-react-app` with React Router + SSR
 
 ## Development
 
@@ -20,16 +18,16 @@ npm start
 
 Be sure to install Docker and start a Docker-machine if necessary.
 
-Let's create an image named `create-react-app-with-express-server`:
+Let's create an image named `create-react-app-ssr`:
 
 ```sh
-docker build -t create-react-app-with-express-server .
+docker build -t create-react-app-ssr .
 ```
 
-Finally, start a container named `create-react-app-with-express-server-instance` at port `80`.
+Finally, start a container named `create-react-app-ssr-instance` at port `80`.
 
 ```sh
-docker run -p 80:9000 --name create-react-app-with-express-server-instance create-react-app-with-express-server
+docker run -p 80:9000 --name create-react-app-ssr-instance create-react-app-ssr
 ```
 
 ## Testing
