@@ -3,7 +3,7 @@
 ## Status
 On-going
 
-## Development
+## Installation
 
 Install dependencies:
 
