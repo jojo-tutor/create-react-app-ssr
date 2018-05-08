@@ -1,5 +1,8 @@
 # Using `create-react-app` with React Router + SSR
 
+## Status
+On-going
+
 ## Development
 
 Install dependencies:
