@@ -3,6 +3,9 @@
 ## Status
 On-going
 
+## To Do
+Add CI/CD
+
 ## Installation
 
 Install dependencies:
