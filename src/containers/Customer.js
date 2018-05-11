@@ -7,7 +7,6 @@ import { connect } from 'react-redux'
 import actions from '../redux/actions'
 import { user_selector } from '../redux/selectors/user'
 
-@connect(user_selector)
 class Customer extends PureComponent {
   constructor(props) {
     super(props)
@@ -96,4 +95,4 @@ class Customer extends PureComponent {
   }
 }
 
-export default Customer
+export default connect(user_selector)(Customer)
