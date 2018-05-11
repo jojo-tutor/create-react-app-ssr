@@ -5,7 +5,7 @@ const TARGET_SERVER_USER = process.env.TARGET_SERVER_USER ? process.env.TARGET_S
 // Target server application path
 const TARGET_SERVER_APP_PATH = `/home/${TARGET_SERVER_USER}/app`
 // Your repository
-const REPO = 'git@gitlab.com:yourUsername/test-server.git'
+const REPO = 'git@gitlab.com:jeshrave003/create-react-app-ssr.git'
 
 module.exports = {
   /**
@@ -14,7 +14,7 @@ module.exports = {
    */
   apps: [
     {
-      name: 'testApp',
+      name: 'create-react-app-ssr',
       script: 'index.js',
       env: {
         NODE_ENV: 'development'
@@ -38,9 +38,9 @@ module.exports = {
       repo: REPO,
       ssh_options: 'StrictHostKeyChecking=no',
       path: TARGET_SERVER_APP_PATH,
-      'post-deploy': 'npm install --production'
-        + ' && pm2 startOrRestart ecosystem.config.js --env=production'
-        + ' && pm2 save'
+      'post-deploy': `npm install --production
+        && pm2 startOrRestart ecosystem.config.js --env=production
+        && pm2 save`
     }
   }
 }
