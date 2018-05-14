@@ -3,7 +3,7 @@ var faker = require('faker')
 function generateCustomers () {
   var customers = []
 
-  for (var id = 0; id < 5000; id++) {
+  for (var id = 0; id < 10000; id++) {
     var firstName = faker.name.firstName()
     var lastName = faker.name.firstName()
     var phoneNumber = faker.phone.phoneNumberFormat()

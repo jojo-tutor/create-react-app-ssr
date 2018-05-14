@@ -28,7 +28,7 @@ class Customer extends PureComponent {
     this.TableHeader = [
       { key: 'first_name', label: 'First Name' },
       { key: 'last_name', label: 'Last' },
-      { key: 'phone', label: 'Column 3' }
+      { key: 'phone', label: 'Phone Number' }
     ]
 
     this.TableData = [...new Array(350)].map((_, i) => ({

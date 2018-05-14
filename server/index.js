@@ -13,7 +13,9 @@ const config = {
 const generateFaker = JSON.stringify(customer())
 
 fs.writeFileSync(path.join(__dirname, config.dbFile), generateFaker, function (err) {
-  if (err) throw err;
+  if (err) {
+    throw err;
+  }
   console.log('Faker file generated.');
 })
 
